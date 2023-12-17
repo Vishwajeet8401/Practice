@@ -18,25 +18,25 @@
         <div class="container">
             <nav>
                 <img class="logo " src="LOGO.png" alt="">
-                <ul>
+                <ul id="sidemenu">
                     <li>
-                        <a href="" class="class">Home</a>
+                        <a href="#header" class="class">Home</a>
                     </li>
                     <li>
-                        <a href="" class="class">About</a>
+                        <a href="#about" class="class">About</a>
                     </li>
                     <li>
-                        <a href="" class="class">Services</a>
+                        <a href="#services" class="class">Services</a>
                     </li>
                     <li>
-                        <a href="" class="class">Portfolio</a>
+                        <a href="#portfolio" class="class">Portfolio</a>
                     </li>
                     <li>
-                        <a href="" class="class">contact</a>
+                        <a href="#contact" class="class">contact</a>
                     </li>
-                    <i class="fa-solid fa-xmark fa-beat"></i>
+                    <i class="fa-solid fa-xmark fa-beat" onclick="closemenu()"></i>
                 </ul>
-                <i class="fa-solid fa-bars fa-flip"></i>
+                <i class="fa-solid fa-bars fa-flip" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p> Full Stack Developer</p>
@@ -105,7 +105,7 @@
     <!-- ----------service------------- -->
     <div id="services">
         <div class="container">
-            <h1 class="sub-title">My Services</h1>
+            <h1 class="subtitle">My Services</h1>
             <div class="services-list">
                 <div>
                     <!-- <i class="fa-thin fa-user-secret"></i> -->
@@ -131,7 +131,7 @@
 
     <div id="portfolio">
         <div class="container">
-            <h1 class="sub-title">My Work</h1>
+            <h1 class="subtitle">My Work</h1>
             <div class="work-list">
                 <div class="work">
                     <img src="work1.jpg" alt="">
@@ -168,7 +168,7 @@
         <div class="container">
             <div class="row">
                 <div class="contact-left">
-                    <h1 class="sub-title">Contact me</h1>
+                    <h1 class="subtitle">Contact me</h1>
                     <p>vishwk801@gmail.com</p>
                     <p> 9762638267</p>
                     <div class="social-icons">
@@ -198,6 +198,8 @@
         var tablink = document.getElementsByClassName("tab-link");
         var tabcontents = document.getElementsByClassName("tab-content");
 
+
+
         function opentab(tabname) {
             for (tablinks of tablink) {
                 tablinks.classList.remove("active-link");
@@ -209,6 +211,17 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab")
 
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
         }
     </script>
 </body>

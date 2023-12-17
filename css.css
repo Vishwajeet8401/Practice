@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: black;
     color: #fff;
@@ -133,7 +137,7 @@ img {
     width: 0;
     ;
     height: 3px;
-    background: red;
+    background: #e8024fff;
     position: absolute;
     transition: .8s;
     left: 0;
@@ -150,7 +154,7 @@ img {
 }
 
 .tab-content ul li span {
-    color: red;
+    color: #e8024fff;
     font-size: 14px;
 }
 
@@ -204,7 +208,7 @@ img {
 }
 
 .services-list div:hover {
-    background: red;
+    background: #e8024fff;
     transform: translateY(-10px);
 }
 
@@ -238,7 +242,7 @@ img {
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), red);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #e8024fff);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -284,7 +288,7 @@ img {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid red;
+    border: 1px solid #e8024fff;
     padding: 14px 50px;
     border-radius: 6px;
     color: white;
@@ -293,7 +297,7 @@ img {
 }
 
 .btn:hover {
-    background: red;
+    background: #e8024fff;
     font-weight: 500;
 }
 
@@ -320,19 +324,19 @@ img {
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: red;
+    color: #e8024fff;
     display: inline-block;
     transition: transform .5s;
 }
 
 .social-icons a:hover {
-    color: red;
+    color: #e8024fff;
     transform: translateY(-5px);
 }
 
 .btn2 {
     display: inline-block;
-    background-color: red;
+    background-color: #e8024fff;
 }
 
 .contact-right form {
@@ -389,16 +393,50 @@ nav .fa-solid {
         font-size: 25px;
     }
     nav ul {
-        background: red;
+        background: #e8024fff;
         position: fixed;
         top: 0;
-        right: 0;
+        right: -200px;
         width: 200px;
-        height: 100vh;
+        height: 100%;
         padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
     }
     nav ul li {
         display: block;
         margin: 25px;
+    }
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .subtitle {
+        font-size: 40px;
+    }
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+    .about-col-2 {
+        font-size: 14px;
+    }
+    .tab-link {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left {
+        flex-basis: 100%;
+    }
+    .contact-right {
+        flex-basis: 100%;
+    }
+    .copyrigth {
+        font-size: 10px;
     }
 }
